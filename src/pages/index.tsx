@@ -1,193 +1,283 @@
-import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import * as React from 'react';
+import { Link } from 'gatsby';
+import Layout from '../components/Layout';
+import {
+    AiFillFire,
+    AiOutlineContacts,
+    AiOutlineCopyrightCircle,
+    AiOutlineGithub,
+    AiOutlineRise,
+    AiOutlineShareAlt,
+    AiOutlineTwitter,
+} from 'react-icons/ai';
+import ZennLogo from '../assets/third/zenn-logo';
+import AtcoderLogo from '../assets/third/atcoder-logo';
+import { StaticImage } from 'gatsby-plugin-image';
+import HeadTemplate from '../components/Head';
+import { motion } from 'framer-motion';
+import { MdSunny } from 'react-icons/md';
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const doclistStyles = {
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
+const card =
+    'bg-indigo-200 hover:scale-[1.005] duration-300 shadow-inner relative rounded-3xl overflow-hidden';
+
+export default function Home() {
+    return (
+        <Layout>
+            <div className='pb-8 md:block hidden'></div>
+            <div className='relative w-full h-[100svh] md:w-[calc(100%-4rem)] md:h-[calc(100svh-4rem)] mx-auto md:rounded-[2.6rem] shadow-inner bg-gradient-to-br from-stone-500 to-zinc-500'>
+                <svg
+                    viewBox='0 0 260 260'
+                    xmlns='http://www.w3.org/2000/svg'
+                    preserveAspectRatio='none'
+                    className='w-full h-full absolute mix-blend-lighten bg-cover md:rounded-[2.6rem]'
+                >
+                    <filter id='noiseFilter'>
+                        <feTurbulence
+                            type='fractalNoise'
+                            baseFrequency='4'
+                            numOctaves='6'
+                            stitchTiles='stitch'
+                        />
+                    </filter>
+                    <rect
+                        width='100%'
+                        height='100%'
+                        filter='url(#noiseFilter)'
+                    />
+                </svg>
+                <div className='absolute mix-blend-lighten opacity-70 top-0 left-0 w-full h-full block md:rounded-[2.6rem] shadow-lg shadow-inset bg-custom-gradient contrast-125'></div>
+                <div className='absolute bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2 flex flex-col gap-6 justify-center text-center'>
+                    <motion.p
+                        initial={{ y: -10, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ ease: 'easeInOut', duration: 0.4 }}
+                        className='md:text-4xl text-2xl font-semibold'
+                    >
+                        hey, I am
+                    </motion.p>
+                    <motion.h1
+                        initial={{ y: -30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{
+                            ease: 'easeOut',
+                            duration: 0.4,
+                            delay: 0.4,
+                        }}
+                        className='md:text-8xl text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-tr from-indigo-600 to-fuchsia-600'
+                    >
+                        iizuka0000
+                    </motion.h1>
+                    <motion.p
+                        initial={{ y: -10, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ ease: 'easeOut', duration: 1, delay: 1 }}
+                        className='md:text-2xl text-lg font-semibold text-black/60'
+                    >
+                        I'm a Japanese high school student.
+                    </motion.p>
+                </div>
+                <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ ease: 'easeOut', duration: 0.8, delay: 1 }}
+                    className='absolute right-10 bottom-10 flex gap-4'
+                >
+                    <a
+                        href='https://twitter.com/iizuka0000'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        <AiOutlineTwitter size={30} className='fill-black/70' />
+                    </a>
+                    <a
+                        href='https://github.com/iizuka-0000'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        <AiOutlineGithub size={30} className='fill-black/70' />
+                    </a>
+                    <a
+                        href='https://zenn.dev/iizuka0000'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        <ZennLogo size={30} className='fill-black/70' />
+                    </a>
+                    <a
+                        href='https://atcoder.jp/users/iizuka0000'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        <AtcoderLogo size={30} className='fill-black/70' />
+                    </a>
+                </motion.div>
+                {/* <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ ease: 'easeOut', duration: 0.8, delay: 1 }}
+                    className='absolute left-10 bottom-10 flex flex-col md:flex-row gap-4'
+                >
+                    <button>
+                        <MdSunny size={30} className='fill-black/70' />
+                    </button>
+                </motion.div> */}
+            </div>
+            <div className='pt-8'></div>
+            <div className='w-[calc(100%-4rem)] mx-auto'>
+                <div className='grid md:grid-cols-3 grid-cols-1 gap-6'>
+                    <Link
+                        to='/about'
+                        className={`${card} hover:brightness-110 aspect-square md:row-span-2`}
+                    >
+                        <StaticImage
+                            src='../assets/img/gradient1.webp'
+                            alt=''
+                            className='h-full bg-cover brightness-90-0 left-0 rounded-3xl z-0 blur'
+                        />
+                        <div className='absolute bottom-0 left-0 w-full p-8'>
+                            <AiOutlineContacts
+                                size={40}
+                                className='fill-white'
+                            />
+                            <p className='text-2xl font-semibold text-white'>
+                                ABOUT
+                            </p>
+                            <p className='text-md text-white/90'>自己紹介</p>
+                        </div>
+                    </Link>
+                    <Link
+                        to='/blog'
+                        className={`${card} hover:brightness-110 md:col-span-2 md:aspect-auto aspect-square`}
+                    >
+                        <StaticImage
+                            src='../assets/img/gradient2.webp'
+                            alt=''
+                            className='h-full w-full bg-cover brightness-90 absolute top-0 left-0 rounded-3xl z-0 blur'
+                        />
+                        <div className='absolute bottom-0 left-0 w-full p-6'>
+                            <div className='flex items-center gap-2'>
+                                <AiOutlineRise
+                                    size={40}
+                                    className='fill-white'
+                                />
+                                <p className='text-2xl font-semibold text-white'>
+                                    BLOG
+                                </p>
+                            </div>
+                            <p className='text-md text-white/90'>
+                                過去に投稿したブログ
+                            </p>
+                        </div>
+                    </Link>
+                    <Link
+                        to='/skill'
+                        className={`${card} hover:brightness-110 md:col-span-2 md:aspect-auto aspect-square`}
+                    >
+                        <StaticImage
+                            src='../assets/img/gradient3.webp'
+                            alt=''
+                            className='h-full w-full bg-cover brightness-90 absolute top-0 left-0 rounded-3xl z-0 blur'
+                        />
+                        <div className='absolute bottom-0 left-0 w-full p-6'>
+                            <div className='flex items-center gap-2'>
+                                <AiFillFire size={40} className='fill-white' />
+                                <p className='text-2xl font-semibold text-white'>
+                                    SKILL
+                                </p>
+                            </div>
+                            <p className='text-md text-white/90'>
+                                過去に利用したことがある技術一覧
+                            </p>
+                        </div>
+                    </Link>
+                    <div className={`${card} md:col-span-2 h-32`}>
+                        <StaticImage
+                            src='../assets/img/gradient4.webp'
+                            alt=''
+                            className='h-full w-full bg-cover brightness-90 absolute top-0 left-0 rounded-3xl z-0 blur'
+                        />
+                        <div className='absolute bottom-1/2 translate-y-1/2 left-0 w-full pl-10'>
+                            <div className='flex items-center gap-1'>
+                                <AiOutlineCopyrightCircle
+                                    size={14}
+                                    className='fill-white'
+                                />
+                                <p className='text-sm font-semibold text-white'>
+                                    {new Date().getFullYear()} iizuka0000
+                                </p>
+                            </div>
+                            <Link
+                                to='/privacy'
+                                className='text-white underline'
+                            >
+                                プライバシーポリシー
+                            </Link>
+                        </div>
+                    </div>
+                    <div className={`${card} h-32`}>
+                        <StaticImage
+                            src='../assets/img/gradient5.webp'
+                            alt=''
+                            className='h-full w-full bg-cover brightness-90 absolute top-0 left-0 rounded-3xl z-0 blur'
+                        />
+                        <div className='absolute bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2'>
+                            <div className='flex gap-6'>
+                                <a
+                                    href='https://twitter.com/iizuka0000'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <AiOutlineTwitter
+                                        size={40}
+                                        className='fill-white'
+                                    />
+                                </a>
+                                <a
+                                    href='https://github.com/iizuka-0000'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <AiOutlineGithub
+                                        size={40}
+                                        className='fill-white'
+                                    />
+                                </a>
+                                <a
+                                    href='https://zenn.dev/iizuka0000'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <ZennLogo
+                                        size={40}
+                                        className='fill-white'
+                                    />
+                                </a>
+                                <a
+                                    href='https://atcoder.jp/users/iizuka0000'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <AtcoderLogo
+                                        size={40}
+                                        className='fill-white'
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='pb-8'></div>
+        </Layout>
+    );
 }
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
+export function Head() {
+    return (
+        <HeadTemplate
+            title=''
+            description='iizuka0000のポートフォリオサイト'
+            keywords=''
+        />
+    );
 }
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  display: `inline-block`,
-  marginBottom: 24,
-  marginRight: 12,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLinks = [
-  {
-    text: "TypeScript Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-    color: "#8954A8",
-  },
-  {
-    text: "GraphQL Typegen Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
-    color: "#8954A8",
-  }
-]
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative" as "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-const IndexPage: React.FC<PageProps> = () => {
-  return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={doclistStyles}>
-        {docLinks.map(doc => (
-          <li key={doc.url} style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
-            >
-              {doc.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <ul style={listStyles}>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
-}
-
-export default IndexPage
-
-export const Head: HeadFC = () => <title>Home Page</title>
