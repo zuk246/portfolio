@@ -7,10 +7,8 @@ type Props = {
     image?: string;
 };
 
-// https://cards-dev.twitter.com/validator
-
-const SITE_URL = 'iizuka-0000.github.io';
-const INIT_IMAGE = 'src/assets/icon.png';
+const SITE_URL = 'https://iizuka-0000.github.io/portfolio';
+const DEFAULT_IMAGE = '../assets/icon.png';
 const SITE_NAME = 'iizuka0000';
 const NAME = 'iizuka0000';
 
@@ -38,7 +36,7 @@ export default function HeadTemplate(props: Props) {
             <meta property='og:url' content={SITE_URL} />
             <meta
                 property='og:image'
-                content={props.image ? props.image : INIT_IMAGE}
+                content={props.image ? props.image : DEFAULT_IMAGE}
             />
 
             <meta name='twitter:card' content='summary' />
@@ -46,7 +44,7 @@ export default function HeadTemplate(props: Props) {
             <meta name='twitter:creator	' content={`@${NAME}`} />
             <meta
                 name='twitter:image'
-                content={props.image ? props.image : INIT_IMAGE}
+                content={props.image ? props.image : DEFAULT_IMAGE}
             />
         </>
     );

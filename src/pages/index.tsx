@@ -7,7 +7,6 @@ import {
     AiOutlineCopyrightCircle,
     AiOutlineGithub,
     AiOutlineRise,
-    AiOutlineShareAlt,
     AiOutlineTwitter,
 } from 'react-icons/ai';
 import ZennLogo from '../assets/third/zenn-logo';
@@ -15,7 +14,6 @@ import AtcoderLogo from '../assets/third/atcoder-logo';
 import { StaticImage } from 'gatsby-plugin-image';
 import HeadTemplate from '../components/Head';
 import { motion } from 'framer-motion';
-import { MdSunny } from 'react-icons/md';
 
 const card =
     'bg-indigo-200 hover:scale-[1.005] duration-300 shadow-inner relative rounded-3xl overflow-hidden';

@@ -62,11 +62,11 @@ export default function Blog() {
                                     delay: i * 0.1,
                                 }}
                             >
-                                <div className='w-72 h-38 bg-gray-100 rounded-lg shadow-lg overflow-hidden mx-auto'>
+                                <div className='w-72 h-38 bg-gray-200 rounded-lg shadow-lg overflow-hidden mx-auto'>
                                     <img
                                         src={d.node.enclosure.url}
                                         alt=''
-                                        className='w-full h-full object-cover'
+                                        className='w-full h-38 object-cover'
                                     />
                                 </div>
                                 <div className='mt-4'>

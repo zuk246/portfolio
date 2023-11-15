@@ -22,23 +22,6 @@ const config: GatsbyConfig = {
                 icon: './src/assets/icon.png',
             },
         },
-        {
-            resolve: 'gatsby-plugin-favicons',
-            options: {
-                logo: './src/assets/icon.png',
-                appName: 'iizuka0000',
-                background: '#fff',
-                icons: {
-                    android: true,
-                    appleIcon: true,
-                    appleStartup: true,
-                    coast: false,
-                    favicons: true,
-                    yandex: false,
-                    windows: false,
-                },
-            },
-        },
         'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',
         {
@@ -59,7 +42,7 @@ const config: GatsbyConfig = {
         {
             resolve: `gatsby-plugin-google-gtag`,
             options: {
-                trackingIds: ['G-XXXXXXXXXX'],
+                trackingIds: ['G-BPHN71Y8LJK'],
                 pluginConfig: {
                     head: true,
                 },
