@@ -38,6 +38,13 @@ const config: GatsbyConfig = {
                 name: 'ZennBlog',
             },
         },
+        {
+            resolve: 'gatsby-source-rss-feed',
+            options: {
+                url: 'https://note.com/iizuka0000/rss',
+                name: 'NoteBlog',
+            },
+        },
         'gatsby-transformer-remark',
         {
             resolve: `gatsby-plugin-google-gtag`,

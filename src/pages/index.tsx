@@ -14,6 +14,7 @@ import AtcoderLogo from '../assets/third/atcoder-logo';
 import { StaticImage } from 'gatsby-plugin-image';
 import HeadTemplate from '../components/Head';
 import { motion } from 'framer-motion';
+import NoteLogo from '../assets/third/note-logo';
 
 const card =
     'bg-indigo-200 hover:scale-[1.005] duration-300 shadow-inner relative rounded-3xl overflow-hidden';
@@ -107,6 +108,13 @@ export default function Home() {
                         rel='noopener noreferrer'
                     >
                         <AtcoderLogo size={30} className='fill-black/70' />
+                    </a>
+                    <a
+                        href='https://note.com/iizuka0000'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        <NoteLogo size={30} className='fill-black/70' />
                     </a>
                 </motion.div>
                 {/* <motion.div
@@ -256,6 +264,16 @@ export default function Home() {
                                     rel='noopener noreferrer'
                                 >
                                     <AtcoderLogo
+                                        size={40}
+                                        className='fill-white'
+                                    />
+                                </a>
+                                <a
+                                    href='https://note.com/iizuka0000'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <NoteLogo
                                         size={40}
                                         className='fill-white'
                                     />
