@@ -39,6 +39,11 @@ export default function HeadTemplate(props: Props) {
                 content={props.image ? props.image : DEFAULT_IMAGE}
             />
 
+            <meta
+                name='google-site-verification'
+                content='5BbP6BNOv2G4lXFIJMtjaZ_clLvqmAuN4Qk6O_j0dEw'
+            />
+
             <meta name='twitter:card' content='summary' />
             <meta name='twitter:site' content={`@${NAME}`} />
             <meta name='twitter:creator	' content={`@${NAME}`} />
