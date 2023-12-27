@@ -32,6 +32,14 @@ export default function Privacy() {
                 >
                     Privacy Policy
                 </motion.h1>
+                <motion.p
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ ease: 'easeOut', duration: 1 }}
+                    className='text-xl font-semibold text-black/80'
+                >
+                    プライバシーポリシー
+                </motion.p>
                 <div className='mt-8'>
                     <div
                         dangerouslySetInnerHTML={{

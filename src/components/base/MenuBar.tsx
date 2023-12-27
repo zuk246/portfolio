@@ -15,7 +15,7 @@ export default function MenuBar() {
 
     return (
         <div>
-            <div className='md:block hidden fixed bottom-14 right-1/2 translate-x-1/2 z-50'>
+            <div className='md:block hidden fixed bottom-14 left-14 z-50'>
                 <div className='flex gap-6 bg-white/40 backdrop-blur-2xl py-5 px-6 rounded-2xl border-2 border-neutral-300/50'>
                     <Link to='/' className='flex gap-1 items-center'>
                         <AiOutlineHome size={20} />
@@ -35,7 +35,7 @@ export default function MenuBar() {
                     </Link>
                 </div>
             </div>
-            <div className='md:hidden fixed top-0 left-0 w-full h-16 px-6 shadow flex bg-white/30 backdrop-blur-lg justify-between items-center z-50'>
+            <div className='md:hidden fixed top-0 left-0 w-full h-16 px-6 flex bg-white/10 backdrop-blur-lg justify-between items-center z-50'>
                 <div></div>
                 <motion.button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -48,14 +48,14 @@ export default function MenuBar() {
                     )}
                 </motion.button>
                 <motion.div
-                    initial={{ x: 200, y: -500, opacity: 0 }}
+                    initial={{ x: 200, y: 0, opacity: 0 }}
                     animate={
                         isMenuOpen
                             ? { x: 0, y: 0, opacity: 1 }
-                            : { x: 200, y: -500, opacity: 0 }
+                            : { x: 200, y: 0, opacity: 0 }
                     }
                     transition={{ type: 'spring', duration: 0.5 }}
-                    className='fixed right-6 top-20 flex flex-col gap-4 backdrop-blur-xl bg-white/30 shadow py-6 pr-16 pl-6 rounded-lg z-40'
+                    className='fixed right-6 top-20 flex flex-col gap-4 backdrop-blur-lg bg-white/30 py-6 pr-16 pl-6 rounded-lg z-40'
                 >
                     <Link to='/' className='flex gap-2 items-center'>
                         <AiOutlineHome size={24} />

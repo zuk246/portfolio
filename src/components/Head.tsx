@@ -1,3 +1,5 @@
+import { graphql } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 type Props = {
@@ -8,13 +10,13 @@ type Props = {
 };
 
 const SITE_URL = 'https://iizuka-0000.github.io/portfolio';
-const DEFAULT_IMAGE = '../assets/icon.png';
 const SITE_NAME = 'iizuka0000';
 const NAME = 'iizuka0000';
+const DEFAULT_IMAGE =
+    'https://iizuka-0000.github.io/portfolio/static/icon-65133f33b73bb056ed07d38864093f0d.png';
 
 export default function HeadTemplate(props: Props) {
     const SITE_TITLE = props.title !== '' ? props.title + ` | ${NAME}` : NAME;
-
     return (
         <>
             <meta charSet='utf-8' />

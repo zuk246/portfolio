@@ -29,8 +29,16 @@ export default function Skill() {
                     transition={{ ease: 'easeOut', duration: 1 }}
                     className='text-6xl font-semibold text-black/80'
                 >
-                    My Skill
+                    Skill
                 </motion.h1>
+                <motion.p
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ ease: 'easeOut', duration: 1 }}
+                    className='text-xl font-semibold text-black/80'
+                >
+                    過去に利用したことがある技術一覧
+                </motion.p>
                 <div className='grid md:grid-cols-4 grid-cols-2 py-16 gap-y-16'>
                     {data.allFile.nodes.map((node, i) => (
                         <motion.div
@@ -49,7 +57,6 @@ export default function Skill() {
                                 alt=''
                                 className='w-24 h-24'
                             />
-                            <p className='text-md font-medium'>{node.name}</p>
                         </motion.div>
                     ))}
                 </div>

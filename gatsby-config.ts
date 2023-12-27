@@ -4,6 +4,8 @@ const config: GatsbyConfig = {
     siteMetadata: {
         title: `iizuka0000`,
         siteUrl: `https://iizuka-0000.github.io/portfolio`,
+        description: `iizuka0000（ShiftF）のポートフォリオサイトです。`,
+        lang: `ja`,
     },
     graphqlTypegen: true,
     plugins: [
@@ -24,7 +26,7 @@ const config: GatsbyConfig = {
                 background_color: `#ffffff`,
                 theme_color: `#ffffff`,
                 display: `standalone`,
-                icon: './src/assets/icon.png',
+                icon: './src/assets/favicon.png',
             },
         },
         'gatsby-transformer-sharp',

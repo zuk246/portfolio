@@ -48,6 +48,14 @@ export default function Blog() {
                 >
                     Blog
                 </motion.h1>
+                <motion.p
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ ease: 'easeOut', duration: 1 }}
+                    className='text-xl font-semibold text-black/80'
+                >
+                    最近の投稿
+                </motion.p>
                 <div className='grid md:grid-cols-2 grid-cols-1 mt-8 gap-y-8'>
                     {blog_data.map(
                         (
