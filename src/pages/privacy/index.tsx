@@ -57,7 +57,7 @@ export function Head() {
     return (
         <HeadTemplate
             title='PRIVACY POLICY'
-            description='プライバシーポリシー - iizuka0000'
+            description='プライバシーポリシー - zuk246'
             keywords=''
         />
     );

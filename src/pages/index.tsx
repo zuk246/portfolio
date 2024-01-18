@@ -66,7 +66,7 @@ export default function Home() {
                         }}
                         className='md:text-8xl text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-tr from-indigo-600 to-fuchsia-600'
                     >
-                        iizuka0000
+                        zuk246
                     </motion.h1>
                     <motion.p
                         initial={{ y: -10, opacity: 0 }}
@@ -84,14 +84,14 @@ export default function Home() {
                     className='absolute sm:right-10 sm:w-auto w-full sm:justify-normal justify-center bottom-10 flex sm:gap-4 gap-3'
                 >
                     <a
-                        href='https://twitter.com/iizuka0000'
+                        href='https://twitter.com/zuk246'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
                         <AiOutlineTwitter size={30} className='fill-black/70' />
                     </a>
                     <a
-                        href='https://github.com/iizuka-0000'
+                        href='https://github.com/zuk246'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
@@ -105,14 +105,14 @@ export default function Home() {
                         <ZennLogo size={30} className='fill-black/70' />
                     </a>
                     <a
-                        href='https://atcoder.jp/users/iizuka0000'
+                        href='https://atcoder.jp/users/zuk246'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
                         <AtcoderLogo size={30} className='fill-black/70' />
                     </a>
                     <a
-                        href='https://note.com/iizuka0000'
+                        href='https://note.com/zuk246'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
@@ -126,7 +126,7 @@ export default function Home() {
                         <MarshmallowLogo size={30} className='fill-black/70' />
                     </a>
                     <a
-                        href='https://www.buymeacoffee.com/iizuka0000'
+                        href='https://www.buymeacoffee.com/zuk246'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
@@ -224,7 +224,7 @@ export default function Home() {
                                     className='fill-white'
                                 />
                                 <p className='text-sm font-semibold text-white'>
-                                    {new Date().getFullYear()} iizuka0000
+                                    {new Date().getFullYear()} zuk246
                                 </p>
                             </div>
                             <Link
@@ -246,7 +246,7 @@ export function Head() {
     return (
         <HeadTemplate
             title=''
-            description='iizuka0000のポートフォリオサイト'
+            description='zuk246のポートフォリオサイト'
             keywords=''
         />
     );

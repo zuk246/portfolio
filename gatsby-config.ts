@@ -2,9 +2,9 @@ import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
     siteMetadata: {
-        title: `iizuka0000`,
-        siteUrl: `https://iizuka-0000.github.io/portfolio`,
-        description: `iizuka0000（ShiftF）のポートフォリオサイトです。`,
+        title: `zuk246`,
+        siteUrl: `https://zuk246.github.io/portfolio`,
+        description: `zuk246のポートフォリオサイトです。`,
         lang: `ja`,
     },
     graphqlTypegen: true,
@@ -20,8 +20,8 @@ const config: GatsbyConfig = {
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
-                name: `iizuka0000`,
-                short_name: `iizuka0000`,
+                name: `zuk246`,
+                short_name: `zuk246`,
                 start_url: `/`,
                 background_color: `#ffffff`,
                 theme_color: `#ffffff`,
@@ -48,7 +48,7 @@ const config: GatsbyConfig = {
         {
             resolve: 'gatsby-source-rss-feed',
             options: {
-                url: 'https://note.com/iizuka0000/rss',
+                url: 'https://note.com/zuk246/rss',
                 name: 'NoteBlog',
             },
         },

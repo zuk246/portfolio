@@ -2,7 +2,7 @@
   <img alt="" src="./src/assets/icon.png" width="60" />
 </p>
 <h1 align="center">
-iizuka0000`s portfolio
+zuk246`s portfolio
 </h1>
 
 <p align="left">
@@ -13,9 +13,9 @@ iizuka0000`s portfolio
 
 ## About
 
-This is iizuka0000`s portfolio.
-If you would like to see my portfolio, please click [this URL](https://iizuka-0000.github.io/portfolio/).
+This is zuk246`s portfolio.
+If you would like to see my portfolio, please click [this URL](https://zuk246.github.io/portfolio/).
 
 ## Author
 
-[iizuka-0000](https://github.com/iizuka-0000)
+[zuk246](https://github.com/zuk246)

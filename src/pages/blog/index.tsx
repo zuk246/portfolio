@@ -123,10 +123,6 @@ export default function Blog() {
 
 export function Head() {
     return (
-        <HeadTemplate
-            title='BLOG'
-            description='iizuka0000のブログ'
-            keywords=''
-        />
+        <HeadTemplate title='BLOG' description='zuk246のブログ' keywords='' />
     );
 }

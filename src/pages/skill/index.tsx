@@ -67,10 +67,6 @@ export default function Skill() {
 
 export function Head() {
     return (
-        <HeadTemplate
-            title='SKILL'
-            description='iizuka0000のスキル'
-            keywords=''
-        />
+        <HeadTemplate title='SKILL' description='zuk246のスキル' keywords='' />
     );
 }

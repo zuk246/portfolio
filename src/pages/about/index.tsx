@@ -4,7 +4,7 @@ import HeadTemplate from '../../components/Head';
 import { motion } from 'framer-motion';
 
 const introducing = `
-こんにちは。iizuka0000と申します。ShiftFと呼んでください。
+こんにちは。zuk246と申します。
 2007年生まれで、今は高校生です。
 
 趣味でプログラミングをしています。
@@ -59,7 +59,7 @@ export function Head() {
     return (
         <HeadTemplate
             title='ABOUT'
-            description='iizuka0000の自己紹介'
+            description='zuk246の自己紹介'
             keywords=''
         />
     );
