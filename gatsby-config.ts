@@ -3,7 +3,7 @@ import type { GatsbyConfig } from 'gatsby';
 const config: GatsbyConfig = {
     siteMetadata: {
         title: `zuk246`,
-        siteUrl: `https://zuk246.github.io/portfolio`,
+        siteUrl: `https://zuk246.net`,
         description: `zuk246のポートフォリオサイトです。`,
         lang: `ja`,
     },
@@ -63,7 +63,7 @@ const config: GatsbyConfig = {
             },
         },
     ],
-    pathPrefix: '/portfolio',
+    pathPrefix: '/',
 };
 
 export default config;

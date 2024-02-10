@@ -15,7 +15,6 @@
         "deploy": "gatsby build --prefix-paths && gh-pages -d public"
     },
     "dependencies": {
-        "add": "^2.0.6",
         "autoprefixer": "^10.4.16",
         "dayjs": "^1.11.10",
         "framer-motion": "^10.16.5",
